@@ -35,7 +35,7 @@
    ### HTTP GET REQUEST
  ```javascript 
   
-   HttpRequest.sendGetRequest("url", null/*JSONObject*/, new ResponseHandler() {
+   HttpRequest.sendGetRequest("url", new ResponseHandler() {
             @Override
             public void getResponse(boolean isSuccess, String response) {
                 if(isSuccess)
@@ -46,19 +46,6 @@
                     System.err.println("error : "+response);
                 }
             }
-        });
-        or 
-        HttpRequest.sendGetRequestArray("url", null/*JSONArray*/, new ResponseHandler() {
-            @Override
-            public void getResponse(boolean isSuccess, String response) {
-                if(isSuccess)
-                {
-                    System.out.println("response : "+response);
-                }
-                else{
-                    System.err.println("error : "+response);
-                }
-            }
-        });
+        });       
  ```
   
